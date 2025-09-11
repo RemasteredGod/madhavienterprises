@@ -7,7 +7,6 @@ import {
   ShoppingBagIcon,
   TruckIcon,
   ShieldCheckIcon,
-  StarIcon,
   ArrowRightIcon,
   PhoneIcon,
 } from '@heroicons/react/24/outline';
@@ -17,14 +16,14 @@ export default function Home() {
   const features = [
     {
       icon: ShoppingBagIcon,
-      title: 'Premium Electronics',
+      title: 'Premium AC & Electronics',
       description:
-        'Authentic Samsung and leading brand electronics with warranty',
+        'Authentic ACs, Fridges, Washing Machines, and Microwaves with warranty',
     },
     {
       icon: TruckIcon,
-      title: 'Fast Delivery',
-      description: 'Quick and secure delivery to your doorstep',
+      title: 'AC Fitting Services',
+      description: 'Professional AC installation and piping services',
     },
     {
       icon: ShieldCheckIcon,
@@ -33,45 +32,11 @@ export default function Home() {
     },
   ];
 
-  const products = [
-    {
-      name: 'Samsung Galaxy S24 Ultra',
-      price: '$1,199',
-      image:
-        'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop',
-      rating: 5,
-      inStock: true,
-    },
-    {
-      name: 'Samsung 65" QLED TV',
-      price: '$1,499',
-      image:
-        'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=300&fit=crop',
-      rating: 5,
-      inStock: false, // This product won't have an add to cart button
-    },
-    {
-      name: 'Samsung Refrigerator',
-      price: '$899',
-      image:
-        'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop',
-      rating: 4,
-      inStock: true,
-    },
-    {
-      name: 'Samsung Washing Machine',
-      price: '$649',
-      image:
-        'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400&h=300&fit=crop',
-      rating: 5,
-      inStock: false, // This product won't have an add to cart button
-    },
-  ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white min-h-screen flex items-center">
+      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-teal-600 text-white min-h-screen flex items-center">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 opacity-20">
@@ -95,20 +60,20 @@ export default function Home() {
             >
               <div className="inline-flex items-center bg-yellow-400/10 border border-yellow-400/20 rounded-full px-4 py-2 mb-6">
                 <span className="text-yellow-400 text-sm font-medium">
-                  ✨ Premium Electronics Store
+                  ✨ AC Sales & Electronics Store
                 </span>
               </div>
 
               <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-                Premium Electronics
+                AC Sales & Electronics
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
                   For Modern Living
                 </span>
               </h1>
 
               <p className="text-xl md:text-2xl mb-10 text-blue-100 leading-relaxed max-w-2xl">
-                Discover the latest Samsung and premium electronics. Quality
-                products, competitive prices, and exceptional service you can
+                Discover premium ACs, Fridges, Washing Machines, and Microwaves. Quality
+                products, competitive prices, and exceptional AC fitting services you can
                 trust.
               </p>
 
@@ -186,11 +151,11 @@ export default function Home() {
               <span className="text-sm font-medium">Why Choose Us</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose Madhavi Enterprises?
+              Why Choose MADHVI ENTERPRISES?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We&apos;re committed to providing the best electronics shopping
-              experience with quality products and exceptional service that
+              We&apos;re committed to providing the best AC sales and electronics shopping
+              experience with quality products and exceptional AC fitting services that
               exceeds expectations.
             </p>
           </motion.div>
@@ -204,9 +169,9 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -220,110 +185,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>{' '}
-      {/* Featured Products */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-4">
-              <span className="text-sm font-medium">🔥 Featured Products</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Featured Products
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Explore our collection of premium Samsung and other leading brand
-              electronics with exclusive deals and warranty coverage.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {products.map((product, index) => (
-              <motion.div
-                key={product.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200"
-              >
-                <div className="relative h-56 overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    Best Seller
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="font-bold text-gray-900 mb-3 text-lg group-hover:text-blue-600 transition-colors duration-200">
-                    {product.name}
-                  </h3>
-                  <div className="flex items-center mb-4">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <StarIcon
-                          key={i}
-                          className={`h-4 w-4 ${
-                            i < product.rating
-                              ? 'text-yellow-400 fill-current'
-                              : 'text-gray-300'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <span className="text-gray-500 text-sm ml-2">
-                      ({product.rating}.0)
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-2xl font-bold text-blue-600">
-                        {product.price}
-                      </span>
-                      <div className="text-gray-500 text-sm">Free shipping</div>
-                    </div>
-                    {product.inStock ? (
-                      <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
-                        <ShoppingBagIcon className="w-4 h-4" />
-                      </button>
-                    ) : (
-                      <div className="text-gray-500 text-sm font-medium bg-gray-100 px-4 py-2 rounded-xl">
-                        Coming Soon
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mt-16"
-          >
-            <Link
-              href="/services"
-              className="group inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              View All Products
-              <ArrowRightIcon className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </motion.div>
-        </div>
       </section>
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-teal-900 text-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div

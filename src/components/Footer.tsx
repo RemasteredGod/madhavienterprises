@@ -31,7 +31,9 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <PhoneIcon className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">+91 98765 43210</span>
+                <a href="tel:+919876543210" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  +91 98765 43210
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <EnvelopeIcon className="h-5 w-5 text-blue-400" />
@@ -113,7 +115,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-300 text-sm">
-              © 2025 Madhavi Enterprises. All rights reserved.
+              © 2025 MADHVI ENTERPRISES. All rights reserved.
             </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
