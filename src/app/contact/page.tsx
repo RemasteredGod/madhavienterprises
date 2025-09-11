@@ -82,7 +82,7 @@ export default function Contact() {
       } else {
         setSubmitStatus('error');
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -152,7 +152,7 @@ export default function Contact() {
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
               Get In Touch
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
-                We're Here to Help
+                We&apos;re Here to Help
               </span>
             </h1>
 
@@ -249,7 +249,7 @@ export default function Contact() {
               Send us a Message
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Fill out the form below and we'll get back to you within 24 hours.
+              Fill out the form below and we&apos;ll get back to you within 24 hours.
             </p>
           </motion.div>
 
@@ -267,7 +267,7 @@ export default function Contact() {
               >
                 <CheckCircleIcon className="h-6 w-6 text-green-600 mr-3" />
                 <span className="text-green-800 font-medium">
-                  Message sent successfully! We'll get back to you soon.
+                  Message sent successfully! We&apos;ll get back to you soon.
                 </span>
               </motion.div>
             )}

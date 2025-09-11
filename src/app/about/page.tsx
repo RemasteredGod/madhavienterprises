@@ -140,7 +140,7 @@ export default function About() {
               Visit Our Store
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Located in Jhansi, we're here to serve all your home appliance needs.
+              Located in Jhansi, we&apos;re here to serve all your home appliance needs.
             </p>
           </motion.div>
 
