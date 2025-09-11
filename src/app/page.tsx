@@ -1,103 +1,406 @@
-import Image from "next/image";
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+  ShoppingBagIcon,
+  TruckIcon,
+  ShieldCheckIcon,
+  StarIcon,
+  ArrowRightIcon,
+  PhoneIcon,
+} from '@heroicons/react/24/outline';
+import Layout from '@/components/Layout';
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const features = [
+    {
+      icon: ShoppingBagIcon,
+      title: 'Premium Electronics',
+      description:
+        'Authentic Samsung and leading brand electronics with warranty',
+    },
+    {
+      icon: TruckIcon,
+      title: 'Fast Delivery',
+      description: 'Quick and secure delivery to your doorstep',
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: 'Quality Assured',
+      description: '100% genuine products with manufacturer warranty',
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const products = [
+    {
+      name: 'Samsung Galaxy S24 Ultra',
+      price: '$1,199',
+      image:
+        'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop',
+      rating: 5,
+      inStock: true,
+    },
+    {
+      name: 'Samsung 65" QLED TV',
+      price: '$1,499',
+      image:
+        'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=300&fit=crop',
+      rating: 5,
+      inStock: false, // This product won't have an add to cart button
+    },
+    {
+      name: 'Samsung Refrigerator',
+      price: '$899',
+      image:
+        'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop',
+      rating: 4,
+      inStock: true,
+    },
+    {
+      name: 'Samsung Washing Machine',
+      price: '$649',
+      image:
+        'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400&h=300&fit=crop',
+      rating: 5,
+      inStock: false, // This product won't have an add to cart button
+    },
+  ];
+
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white min-h-screen flex items-center">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 opacity-20">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)',
+              backgroundSize: '40px 40px',
+            }}
+          ></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center lg:text-left"
+            >
+              <div className="inline-flex items-center bg-yellow-400/10 border border-yellow-400/20 rounded-full px-4 py-2 mb-6">
+                <span className="text-yellow-400 text-sm font-medium">
+                  ✨ Premium Electronics Store
+                </span>
+              </div>
+
+              <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+                Premium Electronics
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+                  For Modern Living
+                </span>
+              </h1>
+
+              <p className="text-xl md:text-2xl mb-10 text-blue-100 leading-relaxed max-w-2xl">
+                Discover the latest Samsung and premium electronics. Quality
+                products, competitive prices, and exceptional service you can
+                trust.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link
+                  href="/services"
+                  className="group bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-300 transition-all duration-300 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center"
+                >
+                  <ShoppingBagIcon className="w-5 h-5 mr-2" />
+                  Shop Now
+                  <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="group border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 text-center backdrop-blur-sm flex items-center justify-center"
+                >
+                  Learn More
+                  <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="flex items-center justify-center lg:justify-start space-x-8 mt-12">
+                <div className="text-center">
+                  <div className="text-2xl font-bold">15+</div>
+                  <div className="text-blue-200 text-sm">Years Experience</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold">10K+</div>
+                  <div className="text-blue-200 text-sm">Happy Customers</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold">24/7</div>
+                  <div className="text-blue-200 text-sm">Support</div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                <Image
+                  src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=600&h=400&fit=crop"
+                  alt="Electronics Store"
+                  width={600}
+                  height={400}
+                  className="rounded-2xl shadow-2xl"
+                />
+                {/* Floating Elements */}
+                <div className="absolute -top-4 -right-4 bg-yellow-400 text-gray-900 px-4 py-2 rounded-xl font-semibold shadow-lg">
+                  Free Delivery!
+                </div>
+                <div className="absolute -bottom-4 -left-4 bg-white text-gray-900 px-4 py-2 rounded-xl font-semibold shadow-lg">
+                  Genuine Products ✓
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      {/* Features Section */}
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-4">
+              <span className="text-sm font-medium">Why Choose Us</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Why Choose Madhavi Enterprises?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              We&apos;re committed to providing the best electronics shopping
+              experience with quality products and exceptional service that
+              exceeds expectations.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>{' '}
+      {/* Featured Products */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-4">
+              <span className="text-sm font-medium">🔥 Featured Products</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Featured Products
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Explore our collection of premium Samsung and other leading brand
+              electronics with exclusive deals and warranty coverage.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {products.map((product, index) => (
+              <motion.div
+                key={product.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200"
+              >
+                <div className="relative h-56 overflow-hidden">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Best Seller
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-bold text-gray-900 mb-3 text-lg group-hover:text-blue-600 transition-colors duration-200">
+                    {product.name}
+                  </h3>
+                  <div className="flex items-center mb-4">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <StarIcon
+                          key={i}
+                          className={`h-4 w-4 ${
+                            i < product.rating
+                              ? 'text-yellow-400 fill-current'
+                              : 'text-gray-300'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-gray-500 text-sm ml-2">
+                      ({product.rating}.0)
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <span className="text-2xl font-bold text-blue-600">
+                        {product.price}
+                      </span>
+                      <div className="text-gray-500 text-sm">Free shipping</div>
+                    </div>
+                    {product.inStock ? (
+                      <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                        <ShoppingBagIcon className="w-4 h-4" />
+                      </button>
+                    ) : (
+                      <div className="text-gray-500 text-sm font-medium bg-gray-100 px-4 py-2 rounded-xl">
+                        Coming Soon
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mt-16"
+          >
+            <Link
+              href="/services"
+              className="group inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              View All Products
+              <ArrowRightIcon className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.3) 1px, transparent 0)',
+              backgroundSize: '50px 50px',
+            }}
+          ></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex items-center bg-yellow-400/10 border border-yellow-400/20 rounded-full px-6 py-3 mb-8">
+              <span className="text-yellow-400 font-medium">
+                🚀 Ready to Upgrade?
+              </span>
+            </div>
+
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              Ready to Upgrade Your
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+                Electronics?
+              </span>
+            </h2>
+
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+              Contact us today for personalized recommendations and competitive
+              pricing on premium electronics. Join thousands of satisfied
+              customers!
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link
+                href="/contact"
+                className="group bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-10 py-4 rounded-xl font-bold hover:from-yellow-300 hover:to-orange-300 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 flex items-center"
+              >
+                <PhoneIcon className="w-5 h-5 mr-2" />
+                Get In Touch
+                <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+              </Link>
+
+              <div className="flex items-center space-x-4 text-gray-300">
+                <div className="flex items-center">
+                  <ShieldCheckIcon className="w-5 h-5 mr-2 text-green-400" />
+                  <span>Warranty Included</span>
+                </div>
+                <div className="flex items-center">
+                  <TruckIcon className="w-5 h-5 mr-2 text-blue-400" />
+                  <span>Free Delivery</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Customer testimonial or trust badges */}
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl mb-2">⭐⭐⭐⭐⭐</div>
+                <div className="text-gray-300">4.9/5 Customer Rating</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl mb-2">✅</div>
+                <div className="text-gray-300">100% Genuine Products</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl mb-2">🚚</div>
+                <div className="text-gray-300">Same Day Delivery</div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </Layout>
   );
 }
