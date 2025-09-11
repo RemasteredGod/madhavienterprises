@@ -38,10 +38,10 @@ const Header = () => {
               </div>
               <div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-purple-600 bg-clip-text text-transparent group-hover:from-blue-500 group-hover:to-purple-500 transition-all duration-300">
-                  Madhavi Enterprises
+                  MADHVI ENTERPRISES
                 </span>
                 <div className="text-xs text-gray-600 font-medium group-hover:text-blue-600 transition-colors duration-300">
-                  Premium Electronics Store
+                  AC Sales & Electronics Store
                 </div>
               </div>
             </Link>
@@ -64,7 +64,7 @@ const Header = () => {
 
             {/* Call Button */}
             <a
-              href="tel:+15551234567"
+              href="tel:+919876543210"
               className="relative flex items-center bg-gradient-to-r from-blue-600 via-blue-700 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:via-blue-800 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:scale-105 border border-blue-500/20"
             >
               <PhoneIcon className="h-4 w-4 mr-2" />
@@ -75,7 +75,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-4">
             <a
-              href="tel:+15551234567"
+              href="tel:+919876543210"
               className="flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md"
             >
               <PhoneIcon className="h-4 w-4" />
