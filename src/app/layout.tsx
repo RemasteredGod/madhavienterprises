@@ -15,7 +15,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "MADHVI ENTERPRISES - AC Sales & Electronics Store",
   description: "Premium ACs, Fridges, Washing Machines, and Microwaves with professional AC fitting services in Jhansi. Quality products, competitive prices, and exceptional service.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
