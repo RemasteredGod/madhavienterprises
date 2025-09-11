@@ -128,11 +128,11 @@ const Header = () => {
                   className="pt-4"
                 >
                   <a
-                    href="tel:+15551234567"
+                    href="tel:+919876543210"
                     className="flex items-center justify-center bg-gradient-to-r from-blue-600 via-blue-700 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold mx-4 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg"
                   >
                     <PhoneIcon className="h-4 w-4 mr-2" />
-                    Call Now: (555) 123-4567
+                    Call Now: +91 98765 43210
                   </a>
                 </motion.div>
               </div>

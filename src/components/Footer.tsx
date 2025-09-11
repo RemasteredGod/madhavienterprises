@@ -21,28 +21,28 @@ const Footer = () => {
                 height={40}
                 className="h-10 w-auto"
               />
-              <span className="text-xl font-bold">Madhavi Enterprises</span>
+              <span className="text-xl font-bold">MADHVI ENTERPRISES</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Your trusted partner for premium electronics. We specialize in
-              Samsung and other leading brand products, providing quality
+              Your trusted partner for AC sales and premium electronics. We specialize in
+              Fridge, Washing Machine, Microwave, AC sales, and AC fitting services with quality
               electronics solutions for homes and businesses.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <PhoneIcon className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+91 98765 43210</span>
               </div>
               <div className="flex items-center space-x-2">
                 <EnvelopeIcon className="h-5 w-5 text-blue-400" />
                 <span className="text-gray-300">
-                  info@madhavienterprises.com
+                  amitrawatlgjhs@gmail.com
                 </span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPinIcon className="h-5 w-5 text-blue-400" />
                 <span className="text-gray-300">
-                  123 Electronics Street, Tech City, TC 12345
+                  Kisan Bazar, Galla Mandi Road, Jhansi near Bus Stand, 284001, 284002, 284004
                 </span>
               </div>
             </div>
@@ -92,19 +92,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-gray-300">Samsung Electronics</span>
+                <span className="text-gray-300">Air Conditioners</span>
               </li>
               <li>
-                <span className="text-gray-300">Mobile Phones</span>
+                <span className="text-gray-300">Refrigerators</span>
               </li>
               <li>
-                <span className="text-gray-300">Home Appliances</span>
+                <span className="text-gray-300">Washing Machines</span>
               </li>
               <li>
-                <span className="text-gray-300">Audio & Video</span>
+                <span className="text-gray-300">Microwaves</span>
               </li>
               <li>
-                <span className="text-gray-300">Computing</span>
+                <span className="text-gray-300">AC Fitting & Piping</span>
               </li>
             </ul>
           </div>
