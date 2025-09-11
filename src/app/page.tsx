@@ -50,7 +50,8 @@ export default function Home() {
           ></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative w-full px-4 sm:px-6 lg:px-8 py-24">
+          <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -136,11 +137,13 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
+          </div>
         </div>
       </section>
       {/* Features Section */}
       <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -184,6 +187,7 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+          </div>
         </div>
       </section>
       {/* CTA Section */}
@@ -200,7 +204,8 @@ export default function Home() {
           ></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative w-full px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -263,6 +268,7 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
+          </div>
         </div>
       </section>
     </Layout>

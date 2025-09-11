@@ -24,3 +24,37 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Mobile viewport fixes */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure full width on mobile */
+@media (max-width: 768px) {
+  body {
+    width: 100vw;
+    min-width: 100vw;
+  }
+  
+  /* Prevent horizontal scroll */
+  * {
+    max-width: 100%;
+  }
+}
+
+/* Extra small screens - ensure hamburger menu is always visible */
+@media (max-width: 475px) {
+  /* Ensure header elements don't overflow */
+  .header-container {
+    min-width: 0;
+    overflow: hidden;
+  }
+  
+  /* Make sure hamburger menu has priority space */
+  .mobile-menu-container {
+    flex-shrink: 0;
+    min-width: fit-content;
+  }
+}
