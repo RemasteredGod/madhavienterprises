@@ -26,22 +26,21 @@ const Header = () => {
         <div className="flex justify-between items-center h-20 max-w-7xl mx-auto header-container">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center min-w-0">
-            <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group">
-              <div className="relative p-1 sm:p-2 rounded-xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 group-hover:from-blue-500/20 group-hover:to-teal-500/20 transition-all duration-300">
+            <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
+              <div className="relative p-1 sm:p-2 rounded-xl bg-gradient-to-br from-blue-500/10 to-teal-500/10">
                 <Image
                   src="/logo.svg"
                   alt="Madhavi Enterprises"
                   width={48}
                   height={48}
-                  className="h-8 w-auto sm:h-12 transition-transform duration-300 group-hover:scale-110"
+                  className="h-8 w-auto sm:h-12"
                 />
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400/20 to-teal-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="hidden xs:block min-w-0">
-                <span className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-teal-600 bg-clip-text text-transparent group-hover:from-blue-500 group-hover:to-teal-500 transition-all duration-300 truncate">
+                <span className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-teal-600 bg-clip-text text-transparent truncate">
                   MADHVI ENTERPRISES
                 </span>
-                <div className="text-xs text-gray-600 font-medium group-hover:text-blue-600 transition-colors duration-300 truncate">
+                <div className="text-xs text-gray-600 font-medium truncate">
                   AC Sales & Electronics Store
                 </div>
               </div>
@@ -65,7 +64,7 @@ const Header = () => {
 
             {/* Call Button */}
             <a
-              href="tel:+919876543210"
+              href="tel:+918423613616"
               className="relative flex items-center bg-gradient-to-r from-blue-600 via-blue-700 to-teal-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:via-blue-800 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:scale-105 border border-blue-500/20"
             >
               <PhoneIcon className="h-4 w-4 mr-2" />
@@ -76,7 +75,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-1 sm:space-x-2 flex-shrink-0 mobile-menu-container">
             <a
-              href="tel:+919876543210"
+              href="tel:+918423613616"
               className="flex items-center bg-gradient-to-r from-blue-600 to-teal-600 text-white px-2 sm:px-3 py-2 rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-md"
             >
               <PhoneIcon className="h-4 w-4" />
@@ -130,11 +129,11 @@ const Header = () => {
                   className="pt-4"
                 >
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+918423613616"
                     className="flex items-center justify-center bg-gradient-to-r from-blue-600 via-blue-700 to-teal-600 text-white px-6 py-3 rounded-xl font-semibold mx-4 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg"
                   >
                     <PhoneIcon className="h-4 w-4 mr-2" />
-                    Call Now: +91 98765 43210
+                    Call Now: +91 84236 13616
                   </a>
                 </motion.div>
               </div>

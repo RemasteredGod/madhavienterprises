@@ -129,7 +129,7 @@ export default function Home() {
                 />
                 {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 bg-yellow-400 text-gray-900 px-4 py-2 rounded-xl font-semibold shadow-lg">
-                  Free Delivery!
+                  Same day available engineer!
                 </div>
                 <div className="absolute -bottom-4 -left-4 bg-white text-gray-900 px-4 py-2 rounded-xl font-semibold shadow-lg">
                   Genuine Products ✓
@@ -247,7 +247,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center">
                   <TruckIcon className="w-5 h-5 mr-2 text-blue-400" />
-                  <span>Free Delivery</span>
+                  <span>Same day available engineer</span>
                 </div>
               </div>
             </div>

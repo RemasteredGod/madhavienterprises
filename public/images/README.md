@@ -28,4 +28,5 @@ Please add the following images to this directory:
 These images will be used in the services page to showcase:
 - Refrigerators (Samsung refrigerator image)
 - Washing Machines (washing machine drum image)
-- Pipeline Services (metal pipes stack image)
+- AC Fitting & Installation (metal pipes stack image)
+

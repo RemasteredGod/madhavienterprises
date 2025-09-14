@@ -28,7 +28,7 @@ export default function About() {
     },
     {
       icon: WrenchScrewdriverIcon,
-      title: 'Pipeline Services',
+      title: 'AC Fitting & Installation',
       description: 'Complete pipeline installation and maintenance',
     },
   ];
@@ -171,8 +171,8 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
-                  <a href="tel:+919876543210" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    +91 98765 43210
+                  <a href="tel:+918423613616" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                    +91 84236 13616
                   </a>
                 </div>
               </div>

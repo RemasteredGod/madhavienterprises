@@ -38,15 +38,15 @@ export default function Services() {
     },
     {
       icon: WrenchScrewdriverIcon,
-      title: 'AC Fitting Services',
-      description: 'Professional AC installation and piping services',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop&auto=format',
+      title: 'AC Fitting',
+      description: 'Professional AC fitting and connection services',
+      image: '/images/metal-pipes.jpg',
     },
     {
       icon: WrenchScrewdriverIcon,
-      title: 'Pipeline Services',
-      description: 'Complete pipeline installation and maintenance services',
-      image: '/images/metal-pipes.jpg',
+      title: 'AC Installation',
+      description: 'Complete AC installation and setup services',
+      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop&auto=format',
     },
   ];
 
@@ -63,13 +63,13 @@ export default function Services() {
     },
     {
       icon: WrenchScrewdriverIcon,
-      title: 'AC Fitting & Installation',
-      description: 'Professional AC installation, piping, and setup services',
+      title: 'AC Fitting',
+      description: 'Professional AC fitting and connection services',
     },
     {
       icon: WrenchScrewdriverIcon,
-      title: 'Pipeline Services',
-      description: 'Complete pipeline installation and maintenance services',
+      title: 'AC Installation',
+      description: 'Complete AC installation and setup services',
     },
   ];
 

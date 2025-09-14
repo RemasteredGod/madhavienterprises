@@ -93,7 +93,7 @@ export default function Contact() {
     {
       icon: PhoneIcon,
       title: 'Phone',
-      details: ['+91 98765 43210'],
+      details: ['+91 84236 13616'],
       description: 'Call us for immediate assistance',
       bgColor: 'from-blue-500 to-blue-600',
     },
@@ -215,7 +215,7 @@ export default function Contact() {
                         className="text-gray-700 font-medium text-lg"
                       >
                         {info.title === 'Phone' ? (
-                          <a href="tel:+919876543210" className="hover:text-blue-600 transition-colors duration-200">
+                          <a href="tel:+918423613616" className="hover:text-blue-600 transition-colors duration-200">
                             {detail}
                           </a>
                         ) : (
@@ -355,7 +355,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-500 hover:border-gray-300 focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all duration-200 bg-white text-gray-900"
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 84236 13616"
                   />
                 </div>
 
@@ -379,12 +379,12 @@ export default function Contact() {
                     } focus:outline-none focus:ring-4 focus:ring-blue-500/10`}
                   >
                     <option value="">Select a subject</option>
-                    <option value="product-inquiry">Product Inquiry</option>
-                    <option value="ac-fitting">AC Fitting Service</option>
-                    <option value="technical-support">Technical Support</option>
-                    <option value="warranty">Warranty Claim</option>
+                    <option value="ac-service">AC Service</option>
+                    <option value="refrigerator-service">Refrigerator Service</option>
+                    <option value="microwave-service">Microwave Service</option>
+                    <option value="ac-fitting">AC Fitting</option>
+                    <option value="ac-piping">AC Piping</option>
                     <option value="general">General Question</option>
-                    <option value="partnership">Partnership Opportunity</option>
                   </select>
                   {errors.subject && (
                     <p className="mt-2 text-sm text-red-600">{errors.subject}</p>
