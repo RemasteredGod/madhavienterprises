@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MADHVI ENTERPRISES - AC Sales & Electronics Store",
+  title: "MADHVI ENTERPRISES - AC Service & Sales Electronic",
   description: "Premium ACs, Fridges, Washing Machines, and Microwaves with professional AC fitting services in Jhansi. Quality products, competitive prices, and exceptional service.",
 };
 

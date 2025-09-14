@@ -61,12 +61,12 @@ export default function Home() {
             >
               <div className="inline-flex items-center bg-yellow-400/10 border border-yellow-400/20 rounded-full px-4 py-2 mb-6">
                 <span className="text-yellow-400 text-sm font-medium">
-                  ✨ AC Sales & Electronics Store
+                  ✨ AC Service & Sales Electronic
                 </span>
               </div>
 
               <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-                AC Sales & Electronics
+                AC Service & Sales Electronic
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
                   For Modern Living
                 </span>
@@ -157,7 +157,7 @@ export default function Home() {
               Why Choose MADHVI ENTERPRISES?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We&apos;re committed to providing the best AC sales and electronics shopping
+              We&apos;re committed to providing the best AC service and sales electronics shopping
               experience with quality products and exceptional AC fitting services that
               exceeds expectations.
             </p>

@@ -24,7 +24,7 @@ const Footer = () => {
               <span className="text-xl font-bold">MADHVI ENTERPRISES</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Your trusted partner for AC sales and premium electronics. We specialize in
+              Your trusted partner for AC service and sales electronics. We specialize in
               Fridge, Washing Machine, Microwave, AC sales, and AC fitting services with quality
               electronics solutions for homes and businesses.
             </p>

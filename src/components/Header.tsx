@@ -41,7 +41,7 @@ const Header = () => {
                   MADHVI ENTERPRISES
                 </span>
                 <div className="text-xs text-gray-600 font-medium truncate">
-                  AC Sales & Electronics Store
+                  AC Service & Sales Electronic
                 </div>
               </div>
             </Link>
